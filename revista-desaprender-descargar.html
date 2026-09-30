@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Desaprender — Revista digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--desk:#dfe3ea;--ink:#141a3a;--paper:#f4f6f9;--blue:#2b3fd6;--sun:#f3cf45;--lilac:#cfc8f7;--ui:#141a3a;--uitext:#f4f6f9;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--desk:#0d1020;--ui:#f4f6f9;--uitext:#141a3a}}
+:root[data-theme="dark"]{--desk:#0d1020;--ui:#f4f6f9;--uitext:#141a3a}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+body{background:var(--desk);font-family:"Source Serif 4",Georgia,serif;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;overflow:hidden}
+.book{container-type:inline-size;position:relative;width:min(92vw,calc((100dvh - 110px) * .714));aspect-ratio:5/7;perspective:2000px}
+.pg{position:absolute;inset:0;padding:8cqw;display:flex;flex-direction:column;justify-content:safe center;gap:3cqw;overflow-y:auto;transform-origin:left center;transition:transform .8s cubic-bezier(.6,.05,.3,1),opacity .3s .5s;box-shadow:0 2cqw 6cqw rgba(0,0,0,.28);border-radius:0 1.5cqw 1.5cqw 0;backface-visibility:hidden}
+.pg.gone{transform:rotateY(-105deg);opacity:0;pointer-events:none}
+h1,h2,.big{font-family:"Bricolage Grotesque",Arial,sans-serif;font-weight:800;line-height:1.02;letter-spacing:-.02em}
+p{font-size:4.2cqw;line-height:1.5;max-width:60ch}
+.paper{background:var(--paper);color:var(--ink)}
+.blue{background:var(--blue);color:#fff}
+.sun{background:var(--sun);color:var(--ink)}
+.ink{background:var(--ink);color:var(--paper)}
+.lilac{background:var(--lilac);color:var(--ink)}
+.mast{font-family:"Bricolage Grotesque",Arial,sans-serif;font-weight:800;font-size:15cqw;letter-spacing:-.04em;line-height:.9}
+.cover{justify-content:space-between}
+.cover h1{font-size:10.5cqw}
+.cover small,.tag{font-family:"Bricolage Grotesque",Arial,sans-serif;font-weight:600;font-size:3.8cqw}
+h2{font-size:9cqw}
+.quote{font-size:11cqw;color:var(--sun)}
+.paper .quote{color:var(--blue)}
+.list{display:grid;gap:2cqw}
+.list span{font-family:"Bricolage Grotesque",Arial,sans-serif;font-weight:800;font-size:6.8cqw;border-left:1.6cqw solid var(--blue);padding-left:3cqw;line-height:1.1}
+.words{font-size:10cqw;line-height:1.1}
+.rule{border-top:.6cqw solid currentColor;width:14cqw}
+.tap{position:absolute;bottom:5cqw;right:6cqw;font-size:3.6cqw;opacity:.75}
+.nav{display:flex;align-items:center;gap:14px;font-family:"Bricolage Grotesque",Arial,sans-serif;font-weight:600;color:var(--ui)}
+.nav button{font:inherit;background:var(--ui);color:var(--uitext);border:0;border-radius:99px;padding:10px 20px;cursor:pointer}
+.nav button:disabled{opacity:.3;cursor:default}
+.nav button:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.pg{transition:none}}
+</style>
+</head>
+<body>
+<main class="book" id="book" aria-label="Revista Desaprender">
+
+<section class="pg blue cover">
+  <div class="mast">Desa&shy;prender</div>
+  <h1>¿Quién les enseñó a los hombres a no llorar?</h1>
+  <div>
+    <div class="rule"></div>
+    <p style="font-size:4.4cqw;margin-top:3cqw">Desde niños aprendemos qué significa “ser hombre”. Pero muchas de esas ideas también enseñan a esconder lo que sentimos.</p>
+    <small style="display:block;margin-top:3cqw">Nº 1 · Nuevas masculinidades</small>
+  </div>
+</section>
+
+<section class="pg paper">
+  <span class="tag">Una escena que conocemos</span>
+  <p>Un niño se cae en el parque y empieza a llorar. Alguien se acerca y le dice:</p>
+  <div class="big quote" style="font-size:11.5cqw">“No llore, sea un hombre.”</div>
+  <p>Tal vez parece una frase cualquiera. Casi todos la hemos escuchado, y muchos la hemos dicho. Y casi siempre se dice con buena intención: para que el niño sea fuerte, para que no sufra, para que nadie se burle de él.</p>
+  <p>El problema no es la intención. Es el mensaje que queda detrás.</p>
+  <p><em>Entonces, ¿qué aprende realmente ese niño?</em></p>
+</section>
+
+<section class="pg sun">
+  <h2 style="font-size:7.6cqw">Lo que aprende sin que nadie se lo explique</h2>
+  <div class="list">
+    <span style="border-color:var(--ink)">Que llorar está mal.</span>
+    <span style="border-color:var(--ink)">Que sentir miedo es vergonzoso.</span>
+    <span style="border-color:var(--ink)">Que pedir ayuda significa ser débil.</span>
+  </div>
+  <p>Nadie se lo enseña con un discurso largo. Lo aprende con una frase, una mirada, una burla o un silencio incómodo. Y lo aprende tan temprano que, cuando crece, ya le parece natural.</p>
+</section>
+
+<section class="pg ink">
+  <h2 style="font-size:7.6cqw">El problema no termina en la infancia</h2>
+  <p>Estas ideas pueden acompañar a los hombres durante años. Lo que comenzó como un “no llores” puede convertirse en dificultad para expresar emociones, pedir ayuda, hablar de lo que les preocupa o reconocer que están pasando por un momento difícil.</p>
+  <div class="big quote" style="font-size:8.5cqw">Lo que se reprime en la infancia puede convertirse en silencio en la adultez.</div>
+  <p>Callar no hace que lo que sentimos desaparezca. Solo lo deja sin un lugar donde ser escuchado.</p>
+</section>
+
+<section class="pg paper">
+  <h2 style="font-size:7.4cqw">¿Qué se espera de un “hombre de verdad”?</h2>
+  <div class="list">
+    <span>Ser fuerte.</span><span>No llorar.</span><span>No tener miedo.</span>
+    <span>Resolverlo todo solo.</span><span>No mostrar vulnerabilidad.</span><span>Ser dominante.</span>
+  </div>
+  <p>Estas exigencias se repiten en la casa, en el colegio, en los chistes, en las series y en las redes sociales. Casi nunca se dicen como reglas, pero se sienten como reglas.</p>
+  <p><strong>Ninguna de estas características debería ser un requisito para demostrar la masculinidad de una persona.</strong></p>
+</section>
+
+<section class="pg lilac">
+  <h2 style="font-size:6.4cqw">Si desde pequeños enseñamos a los hombres a esconder sus emociones, ¿qué pasaría si empezáramos a enseñarles algo diferente?</h2>
+  <div class="big words" style="font-size:9cqw">Sentir. Hablar. Pedir ayuda. Cuidar. Escuchar.</div>
+  <p>De eso parte la idea de las <strong>nuevas masculinidades</strong>: cuestionar los modelos tradicionales de masculinidad y abrir espacio para formas más libres y saludables de ser hombre.</p>
+  <p>No se trata de decir que ser hombre está mal. Se trata de que ser hombre no obligue a callar lo que se siente.</p>
+</section>
+
+<section class="pg blue" style="justify-content:center;text-align:center;align-items:center">
+  <div class="mast" style="font-size:12cqw">Desa&shy;prender</div>
+  <p style="text-align:center">Aquí continúa la parte 2.</p>
+</section>
+
+</main>
+
+<nav class="nav" aria-label="Páginas">
+  <button id="prev">Anterior</button>
+  <span id="count" aria-live="polite">1 / 7</span>
+  <button id="next">Siguiente</button>
+</nav>
+
+<script>
+(function(){
+  var pages=[].slice.call(document.querySelectorAll('.pg')),n=pages.length,cur=0;
+  var prev=document.getElementById('prev'),next=document.getElementById('next'),count=document.getElementById('count');
+  function show(){
+    pages.forEach(function(p,i){
+      p.classList.toggle('gone',i<cur);
+      p.style.zIndex=n-i;
+      p.setAttribute('aria-hidden',i!==cur);
+    });
+    count.textContent=(cur+1)+' / '+n;
+    prev.disabled=cur===0;next.disabled=cur===n-1;
+  }
+  function go(d){cur=Math.max(0,Math.min(n-1,cur+d));show();}
+  prev.onclick=function(){go(-1)};next.onclick=function(){go(1)};
+  document.addEventListener('keydown',function(e){
+    if(e.key==='ArrowRight')go(1);
+    if(e.key==='ArrowLeft')go(-1);
+  });
+  var book=document.getElementById('book'),x0=null,y0=0;
+  book.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;y0=e.touches[0].clientY},{passive:true});
+  book.addEventListener('touchend',function(e){
+    if(x0===null)return;
+    var dx=e.changedTouches[0].clientX-x0,dy=e.changedTouches[0].clientY-y0;
+    if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy))go(dx<0?1:-1); else if(Math.abs(dx)<10&&Math.abs(dy)<10)go(1);
+    x0=null;
+  });
+  show();
+})();
+</script>
+</body>
+</html>
